@@ -1,0 +1,291 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1f2937;
+  background: #f0f9ff;
+}
+
+
+.container {
+  width: min(92%, 960px);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+
+.cabecalho {
+  background: #0e7490;
+  color: white;
+  padding: 1rem;
+  border-bottom: 4px solid #155e75;
+}
+
+.cabecalho h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.3rem 0;
+  border-radius: 4px;
+}
+
+.menu a:hover,
+.menu a:focus {
+  color: #a5f3fc;
+  outline: 2px solid #a5f3fc;
+  outline-offset: 2px;
+}
+
+
+.secao {
+  background: white;
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+}
+
+.secao h2 {
+  font-size: 1.5rem;
+  color: #0e7490;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e0f2fe;
+  padding-bottom: 0.5rem;
+}
+
+.introducao {
+  margin-bottom: 1rem;
+  color: #475569;
+}
+
+
+.cards-servicos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #f8fafc;
+}
+
+.card h3 {
+  color: #155e75;
+  margin-bottom: 0.5rem;
+}
+
+.card ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+  color: #475569;
+}
+
+
+.lista-horarios {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-horarios li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #cbd5e1;
+}
+
+
+fieldset {
+  border: 1px solid #94a3b8;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+legend {
+  font-weight: 700;
+  color: #0e7490;
+  padding: 0 0.5rem;
+}
+
+.subgrupo {
+  border: 1px dashed #cbd5e1;
+  margin-top: 0.5rem;
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #6b7280;
+  border-radius: 6px;
+  font: inherit;
+  background: white;
+}
+
+.campo small {
+  display: block;
+  margin-top: 0.3rem;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: 3px solid #0891b2;
+  outline-offset: 2px;
+}
+
+
+.campo input:invalid:not(:focus):not(:placeholder-shown),
+.campo select:invalid,
+.campo textarea:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: #b91c1c;
+  background: #fef2f2;
+}
+
+
+.termos {
+  margin: 1.5rem 0;
+  padding: 0.75rem;
+  background: #f0f9ff;
+  border-radius: 6px;
+}
+
+.termos label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400;
+}
+
+
+button[type="submit"] {
+  padding: 0.9rem 1.5rem;
+  background: #0e7490;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background: #155e75;
+}
+
+
+.mensagem {
+  margin-top: 1rem;
+  padding: 0.9rem;
+  border-radius: 6px;
+  font-weight: 700;
+  display: none;
+}
+
+.mensagem.sucesso {
+  display: block;
+  background: #d1fae5;
+  color: #065f46;
+  border-left: 5px solid #10b981;
+}
+
+.mensagem.erro {
+  display: block;
+  background: #fee2e2;
+  color: #991b1b;
+  border-left: 5px solid #ef4444;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+figure {
+  margin: 1rem 0;
+}
+
+figcaption {
+  font-size: 0.875rem;
+  color: #64748b;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+
+.rodape {
+  background: #0e7490;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+}
+
+.rodape a {
+  color: #a5f3fc;
+}
+
+
+@media (min-width: 768px) {
+  .cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cabecalho h1 {
+    margin-bottom: 0;
+  }
+
+  .menu {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .cards-servicos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  button[type="submit"] {
+    width: auto;
+  }
+}

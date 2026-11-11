@@ -1,0 +1,12 @@
+[
+  { "id": 1, "tutor": "Maria Silva", "email": "maria@exemplo.com", "telefone": "27999999999", "pet": "Rex", "especie": "Cachorro", "porte": "medio", "servico": "Banho", "data": "2026-11-20", "turno": "manha", "termos": true },
+  { "id": 2, "tutor": "João Souza", "email": "joao@exemplo.com", "telefone": "27988888888", "pet": "Mimi", "especie": "Gato", "porte": "pequeno", "servico": "Consulta", "data": "2026-11-21", "turno": "tarde", "termos": true },
+  { "id": 3, "tutor": "Ana Costa", "email": "ana@exemplo.com", "telefone": "27977777777", "pet": "Thor", "especie": "Cachorro", "porte": "grande", "servico": "Tosa", "data": "2026-11-22", "turno": "manha", "termos": true },
+  { "id": 4, "tutor": "Carlos Pereira", "email": "carlos@exemplo.com", "telefone": "27966666666", "pet": "Luna", "especie": "Gato", "porte": "pequeno", "servico": "Banho", "data": "2026-11-22", "turno": "tarde", "termos": true },
+  { "id": 5, "tutor": "Fernanda Lima", "email": "fernanda@exemplo.com", "telefone": "27955555555", "pet": "Bob", "especie": "Cachorro", "porte": "medio", "servico": "Banho e Tosa", "data": "2026-11-23", "turno": "manha", "termos": true },
+  { "id": 6, "tutor": "Ricardo Alves", "email": "ricardo@exemplo.com", "telefone": "27944444444", "pet": "Nina", "especie": "Gato", "porte": "pequeno", "servico": "Consulta", "data": "2026-11-24", "turno": "tarde", "termos": true },
+  { "id": 7, "tutor": "Juliana Rocha", "email": "juliana@exemplo.com", "telefone": "27933333333", "pet": "Max", "especie": "Cachorro", "porte": "grande", "servico": "Tosa", "data": "2026-11-25", "turno": "manha", "termos": true },
+  { "id": 8, "tutor": "Bruno Dias", "email": "bruno@exemplo.com", "telefone": "27922222222", "pet": "Mel", "especie": "Cachorro", "porte": "pequeno", "servico": "Banho", "data": "2026-11-25", "turno": "tarde", "termos": true },
+  { "id": 9, "tutor": "Patrícia Nunes", "email": "patricia@exemplo.com", "telefone": "27911111111", "pet": "Simba", "especie": "Gato", "porte": "medio", "servico": "Consulta", "data": "2026-11-26", "turno": "manha", "termos": true },
+  { "id": 10, "tutor": "Eduardo Gomes", "email": "eduardo@exemplo.com", "telefone": "27900000000", "pet": "Bolt", "especie": "Cachorro", "porte": "grande", "servico": "Banho e Tosa", "data": "2026-11-27", "turno": "tarde", "termos": true }
+]

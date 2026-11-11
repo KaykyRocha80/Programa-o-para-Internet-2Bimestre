@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetCare Local — Gerenciamento de Atendimentos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <h1>🐾 PetCare Local</h1>
+    <nav class="menu" aria-label="Navegação principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#horarios">Horários</a>
+      <a href="#atendimento">Gerenciamento</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section id="sobre" class="secao">
+      <h2>Sobre o PetCare Local</h2>
+      <p>
+        O <strong>PetCare Local</strong> é um pet shop de bairro que oferece
+        banho, tosa, consultas veterinárias e atendimento domiciliar.
+        Nossa missão é cuidar do seu melhor amigo com carinho e profissionalismo.
+      </p>
+      <figure>
+        <img src="imagens/werzk-luuuuuuu-tDlo2ZPlQlU-unsplash.jpg"
+            alt="Profissional do PetCare Local segurando um gato cinza durante atendimento">
+        <figcaption>Nossa equipe em atendimento.</figcaption>
+      </figure>
+    </section>
+
+    <section id="servicos" class="secao">
+      <h2>Nossos Serviços</h2>
+      <div class="cards-servicos">
+        <article class="card">
+          <h3>🛁 Banho e Tosa</h3>
+          <p>Banho relaxante, tosa higiênica e tosa completa.</p>
+          <ul>
+            <li>Duração: 1h a 2h</li>
+            <li>A partir de R$ 60,00</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>🩺 Consulta Veterinária</h3>
+          <p>Atendimento clínico geral com veterinário experiente.</p>
+          <ul>
+            <li>Duração: 30 min</li>
+            <li>A partir de R$ 120,00</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>🏠 Atendimento Domiciliar</h3>
+          <p>Levamos o cuidado até a sua casa, sem estresse para o pet.</p>
+          <ul>
+            <li>Duração: 1h</li>
+            <li>A partir de R$ 90,00</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="horarios" class="secao">
+      <h2>Horários de Atendimento</h2>
+      <ul class="lista-horarios">
+        <li><strong>Segunda a Sexta:</strong> 8h às 19h</li>
+        <li><strong>Sábado:</strong> 8h às 14h</li>
+        <li><strong>Domingo:</strong> Fechado (apenas emergências)</li>
+      </ul>
+    </section>
+
+    <section id="atendimento" class="secao">
+      <h2>Gerenciamento de Atendimentos</h2>
+      <p class="introducao">
+        Adicione, edite ou exclua as solicitações de atendimento.
+      </p>
+
+      <div style="margin-bottom: 20px; padding: 15px; background: #e0f2fe; border-radius: 8px;">
+          <p style="margin: 0; font-size: 1.1rem; color: #0e7490;"><strong>Total de agendamentos:</strong> <span id="total-agendamentos">Carregando...</span></p>
+      </div>
+      
+      <div style="margin-bottom: 20px;">
+          <label for="filtro-tutor" style="font-weight: bold; display: block; margin-bottom: 5px;">Buscar por tutor ou pet:</label>
+          <input type="text" id="filtro-tutor" placeholder="Digite para filtrar..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+      </div>
+
+      <form id="formAtendimento" action="#" method="post">
+        <input type="hidden" id="id-atendimento">
+
+        <fieldset>
+          <legend>Dados do Tutor</legend>
+
+          <div class="campo">
+            <label for="tutor">Nome completo do tutor *</label>
+            <input type="text" id="tutor" name="tutor" required minlength="3" maxlength="80" autocomplete="name">
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="ajuda-email">
+            <small id="ajuda-email">Exemplo: tutor@exemplo.com</small>
+          </div>
+
+          <div class="campo">
+            <label for="telefone">Telefone *</label>
+            <input type="tel" id="telefone" name="telefone" required inputmode="numeric" pattern="[0-9]{10,11}" placeholder="27999999999" aria-describedby="ajuda-telefone">
+            <small id="ajuda-telefone">Digite DDD + número, somente algarismos.</small>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Dados do Pet</legend>
+
+          <div class="campo">
+            <label for="pet">Nome do pet *</label>
+            <input type="text" id="pet" name="pet" required minlength="2" maxlength="40">
+          </div>
+
+          <div class="campo">
+            <label for="especie">Espécie *</label>
+            <select id="especie" name="especie" required>
+              <option value="">Selecione...</option>
+              <option value="Cachorro">Cachorro</option>
+              <option value="Gato">Gato</option>
+              <option value="Ave">Ave</option>
+              <option value="Roedor">Roedor</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+
+          <fieldset class="subgrupo">
+            <legend>Porte *</legend>
+            <label><input type="radio" name="porte" value="pequeno" required> Pequeno</label>
+            <label><input type="radio" name="porte" value="medio"> Médio</label>
+            <label><input type="radio" name="porte" value="grande"> Grande</label>
+          </fieldset>
+        </fieldset>
+
+        <fieldset>
+          <legend>Detalhes do Atendimento</legend>
+
+          <div class="campo">
+            <label for="servico">Serviço desejado *</label>
+            <select id="servico" name="servico" required>
+              <option value="">Selecione...</option>
+              <option value="Banho">Banho</option>
+              <option value="Tosa">Tosa</option>
+              <option value="Banho e Tosa">Banho + Tosa</option>
+              <option value="Consulta">Consulta Veterinária</option>
+              <option value="Domiciliar">Atendimento Domiciliar</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="data">Data desejada *</label>
+            <input type="date" id="data" name="data" required>
+          </div>
+
+          <fieldset class="subgrupo">
+            <legend>Turno preferido *</legend>
+            <label><input type="radio" name="turno" value="manha" required> Manhã</label>
+            <label><input type="radio" name="turno" value="tarde"> Tarde</label>
+          </fieldset>
+
+          <div class="campo">
+            <label for="observacao">Observações</label>
+            <textarea id="observacao" name="observacao" rows="4" maxlength="300" aria-describedby="ajuda-observacao"></textarea>
+            <small id="ajuda-observacao">Máximo de 300 caracteres.</small>
+          </div>
+        </fieldset>
+
+        <div class="termos">
+          <label>
+            <input type="checkbox" name="termos" required>
+            Li e aceito as condições de atendimento. *
+          </label>
+        </div>
+
+        <div style="margin-top: 1rem; display: flex; gap: 10px;">
+            <button type="submit" id="btn-salvar">Salvar Agendamento</button>
+            <button type="button" id="btn-cancelar" style="display:none; background: #666; border-radius: 6px; border: none; color: white; font-weight: bold; padding: 0.9rem 1.5rem; cursor: pointer;">Cancelar Edição</button>
+        </div>
+      </form>
+
+      <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="secao">
+      <h2>Agendamentos Cadastrados</h2>
+      <div id="status-carregamento" style="margin-bottom: 15px; font-weight: bold; color: #0e7490;">Carregando dados do servidor JSON...</div>
+      
+      <table class="tabela-admin" style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+          <thead>
+              <tr style="background-color: #0e7490; color: white;">
+                  <th style="padding: 10px; border: 1px solid #ccc;">Pet / Tutor</th>
+                  <th style="padding: 10px; border: 1px solid #ccc;">Serviço</th>
+                  <th style="padding: 10px; border: 1px solid #ccc;">Data</th>
+                  <th style="padding: 10px; border: 1px solid #ccc;">Ações</th>
+              </tr>
+          </thead>
+          <tbody id="corpo-tabela">
+          </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer id="contato" class="rodape">
+    <p><strong>PetCare Local</strong> — Rua dos Bichos, 123 — Vitória/ES</p>
+    <p>Contato: <a href="mailto:contato@petcarelocal.com">contato@petcarelocal.com</a></p>
+    <p>&copy; 2026 PetCare Local. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
